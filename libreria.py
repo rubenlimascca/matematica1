@@ -21,11 +21,15 @@ def escalonaSimple(A):
             operacionFila(A,i,j,ratio)
             
             
-#def escalonaConPiv(A):
- #   nfil=A.shape[0]
- #   ncol=A.shape[1]
- #   for j in range(0,nfil):
- #       imax=np.argmax(np.abs(A[j:nfil,j]))
-  #      intercambiaFilas(A,j+imax,j)
-   #     for i in range(j+1,nfil):
+def escalonaConPiv(A):
+    nfil=A.shape[0]
+    ncol=A.shape[1]
+    for j in range(0,nfil):
+        imax=np.argmax(np.abs(A[j:nfil,j]))
+        intercambiaFilas(A,j+imax,j)
+        for i in range(j+1,nfil):
+            ratio=A[i,j]/A[j,j]
+            operacionFila(A,i,j,ratio)
+            
+
 
