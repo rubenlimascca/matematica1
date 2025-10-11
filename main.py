@@ -12,6 +12,7 @@ import libreria as lib
 #lib.operacionFila(A,2,0,2)
 #lib.escalonaSimple(A)
 
-A=[[0, 14, -6], [12,0,4], [-11,3,0]]
+A=np.array([[0, 14, -6], [12,0,4], [-11,3,0]])
+print(A)
 lib.escalonaConPiv(A)
 print(A)

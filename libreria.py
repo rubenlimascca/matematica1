@@ -32,4 +32,4 @@ def escalonaConPiv(A):
             operacionFila(A,i,j,ratio)
             
 
-adicionar 
+#adicionar 
