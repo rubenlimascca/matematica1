@@ -16,3 +16,4 @@ A=np.array([[0, 14, -6], [12,0,4], [-11,3,0]])
 print(A)
 lib.escalonaConPiv(A)
 print(A)
+jfdkjdsahflahlksalkflkjfe
