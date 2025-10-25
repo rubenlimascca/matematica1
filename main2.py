@@ -13,7 +13,9 @@ for i in range(4,17):
     b=H.dot(x)
     
     c=np.linalg.cond(H,2)
-    xx=np.linalg.solve(H,b)
+    ##xx=np.linalg.solve(H,b)
+    b=b.reshape(b.shape[0],1)
+    xx=lib.GaussElimSimple(H,b)
     err=np.linalg.norm(x-xx,np.inf)/np.linalg.norm(x,np.inf)
     solutions.append(xx)
     
