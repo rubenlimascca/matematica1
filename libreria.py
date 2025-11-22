@@ -1,4 +1,5 @@
 import numpy as np
+import numpy.polynomial as P
 
 def intercambiaFilas(A,fil_i,fil_j):
     A[[fil_i,fil_j],:]=A[[fil_i,fil_j],:]
@@ -103,3 +104,14 @@ def LUdecomposition(A):
             
 
 #adicionar 
+
+def interpLagrange(cx,cy):
+    n=len(cx)
+    p=P.Polynomial([0])
+    for i in range(n):
+        mascara=np.ones(n,dtype=bool)
+        mascara[i]=False
+        raices=cx[mascara]
+        Laux=P.Polynomial.fromroots(raices)
+        p=p+cy[i]*Laux/Laux(cx[i])
+    return p
