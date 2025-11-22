@@ -117,3 +117,19 @@ def interpLagrange(cx,cy):
     return p
 
 #1
+
+def SolveByLU(A,b):
+    Y=sustProgresiva(L,b)
+    X=sustRegresiva(U,Y)
+    return X
+
+def interpLagrange(cx,cy):
+    n = len(cx)
+    p = P.Polynomial(([0]))
+    for i in range(n):
+        mascara = np.ones(n,dtype=bool)
+        mascara[i] = False
+        raices = cx[mascara]
+        Laux = P.Polynomial.fromroots(raices)
+        p = p + cy[i]*Laux/Laux(cx[i])
+    return p
