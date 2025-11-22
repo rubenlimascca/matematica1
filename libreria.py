@@ -115,3 +115,5 @@ def interpLagrange(cx,cy):
         Laux=P.Polynomial.fromroots(raices)
         p=p+cy[i]*Laux/Laux(cx[i])
     return p
+
+#1
