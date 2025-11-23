@@ -114,7 +114,7 @@ def interpLagrange(cx, cy):
     return p
 
 
-# 1dsdfsdf
+# 1
 
 
 def SolveByLU(A, b):
