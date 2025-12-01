@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy.polynomial as P
 
 """Interpolación"""
-x = np.arange(1, 25)
+x = np.arange(1, 22)
 # x=np.array([2,3,4,5,7,9,10,1]) #Cordenadas "x" de los puntos a interpolar
 # y=np.array([1,3,-4,-5,17,-19,-20,5]) # Coordenadas "y" de los puntos a interpolar
 y = np.sin(x)
