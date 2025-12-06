@@ -1,4 +1,5 @@
 import numpy as np
+import libreria as lib
 
 
 # Usando NumPy
@@ -86,3 +87,25 @@ def rango_matriz_manual(matriz):
 print(f"Rango de la matriz manual: {rango_matriz_manual(matriz_ejemplo)}")
 print(f"Rango de la matriz manual: {rango_matriz_manual(matriz)}")
 print(f"Rango de la matriz manual: {rango_matriz_manual(matriz1)}")
+
+
+# Rango de la matriz con nuestra libreria
+
+
+def rango_matriz_manual_lib(matriz):
+    lib.escalonaSimple(matriz)
+    return np.any(matriz, axis=1).sum()
+
+
+# Ejemplo de uso
+matriz_ejemplo = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# Ejemplo de uso
+matriz = np.array([[1, 2, 3], [0, 5, 6], [0, 0, 9]])
+
+# Ejemplo de uso
+matriz1 = np.array([[1, 2, 3], [2, 4, 6], [0, 0, 0]])
+
+print(f"Rango de la matriz manual librería: {rango_matriz_manual_lib(matriz_ejemplo)}")
+print(f"Rango de la matriz manual librería: {rango_matriz_manual_lib(matriz)}")
+print(f"Rango de la matriz manual librería: {rango_matriz_manual_lib(matriz1)}")

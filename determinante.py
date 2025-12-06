@@ -1,4 +1,5 @@
 import numpy as np
+import libreria as lib
 
 
 def determinante_operaciones_elementales(matriz):
@@ -202,3 +203,21 @@ print(f"Determinante 1x1: {determinante_robusto(matriz_1x1)}")
 
 matriz_vacia = []
 print(f"Determinante matriz vacía: {determinante_robusto(matriz_vacia)}")
+
+
+# Determinante con nuestra libreria
+
+
+def determinante_libreria(matriz):
+    lib.escalonaSimple(matriz)
+    n = len(matriz)
+    det = matriz[1, 1]
+    for i in range(n - 1):
+        det *= matriz[i + 1, i + 1]
+    return det
+
+
+matriz_3x3 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+det = determinante_libreria(matriz_3x3)
+print(f"Determinante con nuestra libreria: {det}")
+print()

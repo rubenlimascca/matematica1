@@ -3,7 +3,7 @@ import numpy.polynomial as P
 
 
 def intercambiaFilas(A, fil_i, fil_j):
-    A[[fil_i, fil_j], :] = A[[fil_i, fil_j], :]
+    A[[fil_i, fil_j], :] = A[[fil_j, fil_i], :]
 
 
 def operacionFila(A, fil_m, fil_piv, factor):  # fil_m=fil_m-factor*fil_piv
